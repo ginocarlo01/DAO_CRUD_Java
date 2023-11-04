@@ -3,7 +3,7 @@
 
 import java.sql.*;
 
-//Conexão co m o banco de dados.
+//Conexão com o banco de dados.
 public class DAO {
     private final String url = "jdbc:mariadb://[ENDEREÇO_DO_SERVIDOR]/meu_banco";
     private final String user = "[SEU_USUARIO]";
@@ -13,6 +13,7 @@ public class DAO {
         return DriverManager.getConnection(url, user, password);
     }
 
+    // INSERT
     public void inserir(String nome, String email) {
         String sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
 
@@ -26,7 +27,7 @@ public class DAO {
         }
     }
 
-    // Deletar
+    // DELETE
     public void deletar() {
         String sql = "DELETE FROM usuarios WHERE = ";
 
@@ -39,5 +40,5 @@ public class DAO {
     }
 
 }
+// Precisamos fazer o mesmo processo acima, para ler,e  atualizar. 
 
-// Faríamos o mesmo processo acima, para ler, atualizar, e sair.
