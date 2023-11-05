@@ -4,7 +4,15 @@ import java.util.Scanner;
 
 public class App {
 
+	private static void start(){
+		System.out.println("Boas vindas ao Projeto II da disciplina de Programação orientada a objetos II!\n");
+		System.out.println("\nEsse projeto consiste em um programa que realiza operações do tipo CRUD em um banco de dados local\n");
+		System.out.println("\nVersão: 1.1\n\nData da última atualização: 05/11/2023\n\n");
+	}
+
 	public static void main(String[] args) {
+		start();
+
 		Scanner leitor = new Scanner(System.in);
 		
 		int opcao;
@@ -100,10 +108,14 @@ public class App {
             	
             	switch (opcaoaux) {
             	case 1:
-            		System.out.println("\nInformações sobre ajuda\n");
+            		System.out.println("\n-----------------AJUDA-----------------\n");
+					System.out.println("\n\nEsse programa consiste em um projeto para a matéria de Programação Orientada a Objetos II\n\n");
+					System.out.println("Ele realiza operações do tipo CRUD em um banco de dados local. Isso é, operações de "
+					+ "inserção, leitura, atualização e remoção de dados.\n\n");
             		break;
             	case 2:
-            		System.out.println("\nInformações sobre o programa\n");
+            		System.out.println("\n-----------------Sobre-----------------\n");
+					System.out.println("Versão: 1.1\n\nDesenvolvido por:\nPedro Henrique - RA: 260871\n\n");
             		break;
             	}
             	
